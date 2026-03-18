@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>AssociationLaVolière</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  display: flex;
+}
+.menu {
+  width: 250px;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+}
+.menu h2 {
+  margin-bottom: 20px;
+}
+.menu button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  background: #334155;
+  color: white;
+  cursor: pointer;
+}
+.content {
+  flex: 1;
+  padding: 20px;
+}
+.card {
+  background: #f1f5f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+</style>
+</head><body><div class="menu">
+  <h2>🦜 AssociationLaVolière</h2>
+  <button onclick="show('dashboard')">Dashboard</button>
+  <button onclick="show('oiseaux')">Oiseaux</button>
+  <button onclick="show('familles')">Familles</button>
+  <button onclick="show('ap')">Anciens propriétaires</button>
+</div><div class="content" id="content"></div><script>
+function show(page){
+  if(page === "dashboard"){
+    document.getElementById("content").innerHTML = `
+      <div class="card">
+        <h2>Tableau de bord</h2>
+        <p>Bienvenue Angie 👋</p>
+      </div>`;
+  }
+
+  if(page === "oiseaux"){
+    document.getElementById("content").innerHTML = `
+      <div class="card">
+        <h2>Oiseaux</h2>
+        <p>Module en construction</p>
+      </div>`;
+  }
+
+  if(page === "familles"){
+    document.getElementById("content").innerHTML = `
+      <div class="card">
+        <h2>Familles</h2>
+        <p>Module en construction</p>
+      </div>`;
+  }
+
+  if(page === "ap"){
+    document.getElementById("content").innerHTML = `
+      <div class="card">
+        <h2>Anciens propriétaires</h2>
+        <p>Module en construction</p>
+      </div>`;
+  }
+}
+
+show("dashboard");
+</script></body>
+</html>
